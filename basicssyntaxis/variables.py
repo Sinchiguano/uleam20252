@@ -130,7 +130,151 @@ animals['monkey']='ugly'
 animals['mouse']='tiny'
 animals['donkey']='big'
 
-for item in animals:
-    feature=animals[item]
-    print("%item has %feature" % (item,feature))
+
+
+# for item in animals:
+#     feature=animals[item]
+#     print("%s is %s" % (item,feature))
+
+
+myDictionary={'person':2,'cat':4, 'spider':8}
+
+
+for key in myDictionary:
+    numbersOfLegs=myDictionary[key]
+    print("The %s has %d"%(key, numbersOfLegs))
+
+
+# CONDITIONALS
+
+print('# CONDITIONALS')
+
+
+latency=80
+if latency<50:
+    print('LOW LATENCY')
+elif latency==0:
+    print('MEDIUM LATENCY ')
+else:
+    print('HIGH LATENCY')
+
+
+
+
+#LOOPS
+
+for i in range(10):
+    print(i)
+
+
+counter=0
+while counter<10:
+    print('I am counting from 0 to 210', f'Actual number {counter}')
+    # counter=counter+1
+    counter+=1
+
+
+
+
+#INPUT
+# print('# INPUTS')
+# name=input('Enter your name, please \n')
+# print(f'Hello my worthy: {name}')
+
+
+
+
+squareNumbers=list()
+for i in range(10):
+    squareNumbers.append(i*i)
+print(squareNumbers)
+
+
+
+squareNumbersV2=[i*i for i in range(10)]
+print(squareNumbersV2)
+
+
+name='Cesar Augusto Sinchiguano Chiriboga'
+letterInDictionary={}
+for letter in name:
+    letterInDictionary[letter]=letterInDictionary.get(letter, 0)+1
+print(letterInDictionary)
+
+
+
+
+lista=[1,2,3]
+listb=[11,22,33]
+newList=[lista,listb]
+print(newList)
+print(newList[1][2])
+
+
+
+
+# MULTIPLE CONDITIONS
+
+age=20
+student=True
+if age < 18 and student:
+    print('ADULT STUDENT')
+
+
+# BREAK AND CONTINUE
+
+for i in range(10):
+    print(f'The current number is {i}')
+    if i == 5:
+        break
+
+
+
+for i in range(5):
+    if i==3:
+        continue
+    print(f'The current number is {i}')
+
+
+
+
+# FUNCTIONS
+
+def greetings(name):
+    return f"Hello {name}"
+
+
+tmpName=greetings('santiago')
+print(tmpName)
+
+
+
+
+#FUNCTIONS WITH DEFAULT VARIABLES
+def connect(device="Router"):
+    print(f'connecting to {device}...')
+
+connect()
+
+connect('switch')
+
+
+# LOOP WITH DICTIONARY
+
+device={'router':'active','switch':'inactive','server':'active'}
+
+
+for name, status in device.items():
+    print(f'{name}:{status}')
+
+
+# REVERSE STRING
+text="python"
+rev=""
+
+for char in text:
+    rev=char+rev
+
+print(rev)
+
 print('ok!!!')
