@@ -90,7 +90,7 @@ class Students:
         print('the student has been registered....')
         self.name=name
         self.course=course
-    def dataStudent(self):
+    def dataStudent(self,status='No active'):
         print(f'Name: {self.name} and Course: {self.course}')
         return
 
