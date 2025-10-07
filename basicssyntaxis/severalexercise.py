@@ -85,19 +85,58 @@
 # student2.dataStudent()
 
 
-class Students:
-    def __init__(self,name,course='AI'):
-        print('the student has been registered....')
-        self.name=name
-        self.course=course
-    def dataStudent(self,status='No active'):
-        print(f'Name: {self.name} and Course: {self.course}')
-        return
+# class Students:
+#     def __init__(self,name,course='AI'):
+#         print('the student has been registered....')
+#         self.name=name
+#         self.course=course
+#     def dataStudent(self,status='No active'):
+#         print(f'Name: {self.name} and Course: {self.course}')
+#         return
 
 
-student1=Students('Cesar')
-student2=Students('Karen', 'Distributed sytems')
+# student1=Students('Cesar')
+# student2=Students('Karen', 'Distributed sytems')
 
 
-student1.dataStudent()
-student2.dataStudent()
+# student1.dataStudent()
+# student2.dataStudent()
+
+
+balance = 1000
+
+while True:
+    print("\n=== Banking System ===")
+    print("1 > Deposit")
+    print("2 > Withdraw")
+    print("3 > Check Balance")
+    print("4 > Exit")
+
+    try:
+        choice = int(input("Enter your choice: "))
+    except ValueError:
+        print("⚠️ Invalid input, please enter a number.")
+        continue
+
+    if choice == 1:
+        money = int(input("Enter the amount to deposit: "))
+        balance += money
+        print(f"✅ You deposited ${money}. New balance: ${balance}")
+    
+    elif choice == 2:
+        money = int(input("Enter the amount to withdraw: "))
+        if money <= balance:
+            balance -= money
+            print(f"💵 Take your money. Remaining balance: ${balance}")
+        else:
+            print("❌ Not enough balance.")
+    
+    elif choice == 3:
+        print(f"💰 Your current balance is: ${balance}")
+    
+    elif choice == 4:
+        print("👋 Thank you for using our banking system!")
+        break
+    
+    else:
+        print("⚠️ Invalid option, please try again.")
