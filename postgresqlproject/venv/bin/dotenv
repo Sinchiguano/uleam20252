@@ -1,4 +1,4 @@
-#!/home/ros/uleam20252/postgresqlproject/venv/bin/python3
+#!/home/robotia/uleam20252/postgresqlproject/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

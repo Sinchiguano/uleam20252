@@ -1,0 +1,25 @@
+1) Backend
+cd sms-app/backend
+python3 -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# (Optional) create backend/.env based on .env.example
+cp .env.example .env
+
+# Run
+python -m backend.app
+# or from backend folder:
+# python app.py
+
+
+API base: http://localhost:5000/api/v1
+Health: http://localhost:5000/api/health
+
+2) Frontend
+cd ../frontend
+npm install
+VITE_API_BASE=http://localhost:5000/api/v1 npm run dev
+
+
+Open: http://localhost:5173
